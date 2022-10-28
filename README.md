@@ -26,11 +26,8 @@ During runtime, *Catena-X API* expects the following components to be accessible
 ## API Docs
 
 The api documentation is self-hosted under the path `/public/api-docs` as a swagger ui environment.
-The `swagger.json` is self-generated and accessible under `/public/swagger.json`.
-At time of writing you can find a deployed example here:
- - [swagger ui](https://api.catenax-cdq.com/public/api-docs/).
- - [swagger.json](https://api.catenax-cdq.com/public/swagger.json).
-
+The `swagger.json` is self-generated and accessible under `/public/swagger.json`, as well as
+in the [docs folder](docs/fraud_api_v120.json).
 
 ## Configuration
 
