@@ -15,7 +15,6 @@ const swaggerDefinition = {
 		description: 'Serves fraud case information and statistics',
 	},
 	openapi: "3.0.0",
-	basePath: '/',
 };
 
 const specs = swaggerJsdoc({
@@ -100,6 +99,7 @@ router.get('/alive', (_req: Request, res: Response) => {
  *       204:
  *         description: The api is ready to accept requests.
  *       418:
+ *         description: The api is not yet ready to accept any requests.
  *         content:
  *           application/json:
  *             schema:
@@ -146,13 +146,16 @@ router.get('/ready', (async(_req: Request, res: Response) => {
  *     - Public
  *     responses:
  *       200:
+ *         description: Package name and version.
  *         content:
  *           application/json:
  *             schema:
  *               type: object
  *               properties:
- *                 name: string
- *                 version: string
+ *                 name:
+ *                   type: string
+ *                 version:
+ *                   type: string
  *               example:
  *                 name: catenax-api
  *                 version: 1.1.8

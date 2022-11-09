@@ -59,9 +59,7 @@ server.use(SentryHelper.errorMiddleware());
  *     bearerAuth:
  *       type: http
  *       description: A bearer access token as supplied by keycloak, to be used in **Dashboard** endpoints.
- *       name: Authorization
- *       in: header
- *       scheme: Bearer
+ *       scheme: bearer
  *       bearerFormat: JWT
  */
 export default server;

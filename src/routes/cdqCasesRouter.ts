@@ -9,7 +9,6 @@ const router = express.Router();
  * /fraudcases:
  *   get:
  *     description: Returns cdq fraud cases as queried.
- *     url: https://developer.cdq.com/reference-docs/bankaccount-data/V2/tag/Fraud-Cases/#tag/Fraud-Cases/operation/readFraudCasePage
  *     tags:
  *     - Dashboard
  *     security:
@@ -71,7 +70,6 @@ router.get('/', (req: Request, res: Response, next: NextFunction) => {
  * /fraudcases:
  *   post:
  *     description: Create CATENAX fraud case.
- *     url: https://developer.cdq.com/reference-docs/bankaccount-data/V2/tag/Fraud-Cases/#tag/Fraud-Cases/operation/readFraudCasePage
  *     tags:
  *     - Dashboard
  *     security:

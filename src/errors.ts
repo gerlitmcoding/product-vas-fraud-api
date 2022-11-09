@@ -11,7 +11,7 @@ import log from './log';
  *         statusCode:
  *           type: integer
  *           format: int32
- *           minimum: 100,
+ *           minimum: 100
  *           maximum: 500
  *         message:
  *           type: string
