@@ -690,7 +690,6 @@ documentation.
 See Fraud Prevention: Modes of Operation (Appendix B) and Fraud Prevention Database (Appendix A).
 Helm Charts: GitHub - catenax-ng/product-vas-fraud-cd https://github.com/catenax-ng/product-vas-fraud-cd
 
-
 ::: formalpara-title
 **Content**
 :::
