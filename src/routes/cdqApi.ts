@@ -42,10 +42,10 @@ function httpsRequest(
         } else {
           const statusMsgs: string[] = [];
           if (has(parsed, "error")) {
-            statusMsgs.push(get(parsed, "error") as string);
+            statusMsgs.push(get(parsed, "error") as unknown as string);
           }
           if (has(parsed, "message")) {
-            statusMsgs.push(get(parsed, "message") as string);
+            statusMsgs.push(get(parsed, "message") as unknown as string);
           }
           if (statusMsgs.length === 0) {
             statusMsgs.push("unknown error");

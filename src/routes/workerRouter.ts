@@ -118,7 +118,7 @@ router.put('/', apiKeyAuth, db.middleware, jsonBody, async (req: Request, res: R
 			res.setHeader('Content-Type', 'application/json');
 			const response = {
 				updated: inserted.length,
-				updatedAt: get(tz,'[0].timestamptz') as string,
+				updatedAt: get(tz,'[0].timestamptz') as unknown as string,
 			};
 			res.status(200).send(JSON.stringify(response));
 		}

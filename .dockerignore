@@ -1,7 +1,10 @@
-dist
-node_modules
-.git
+.git/
+.github/
+dist/
+docs/
+node_modules/
 .gitignore
-.dockerignore
+.gitlab-ci.yml
 Dockerfile
 README.md
+SECURITY.md

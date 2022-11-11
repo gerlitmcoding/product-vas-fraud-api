@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import { get, isNumber, isString, set } from 'lodash';
+import { isNumber, isString } from 'lodash';
 import log from './log';
 
 /**
@@ -127,30 +127,36 @@ function notFoundHandler(req: Request, res: Response, next: NextFunction) {
 	next();
 }
 
+function hasProperty<T, U extends PropertyKey>(obj: T, property: U): obj is T & Record<U, unknown> {
+	return obj && property in obj;
+}
+
 function defaultErrorHandler(err: Error, _req: Request, res: Response, next: NextFunction) {
 	if (res.headersSent) {
 		log.error("Response sent before error handler, do not do this!");
 		next(err);
 	} else {
-		let code: number;
-		if (err instanceof OperationalError) {
-			code = err.statusCode;
-		} else if (isNumber(get(err,'statusCode'))) {
-			code = get(err, 'statusCode') as number;
-		} else {
-			code = 500;
-		}
+		let statusCode: number;
+		let error: string | undefined;
 		const message = err.message || "unexpected error";
+		if (hasProperty(err,'error') && isString(err.error)) {
+			error = err.error;
+		}
+		if (err instanceof OperationalError) {
+			statusCode = err.statusCode;
+		} else if (hasProperty(err,'statusCode') && isNumber(err.statusCode)) {
+			statusCode = err.statusCode;
+		} else {
+			statusCode = 500;
+		}
 		const response = {
-			statusCode: code,
+			statusCode,
 			message,
+			error,
 		}
-		if (isString(get(err, 'error'))) {
-			set(response, 'error', get(err, 'error'));
-		}
-		log.error(`${code}: ${message}`);
+		log.error(`${statusCode}: ${message}`);
 		res.setHeader('Content-Type', 'application/json');
-		res.status(code).send(JSON.stringify(response));
+		res.status(statusCode).send(JSON.stringify(response));
 	}
 	next(err);
 }
