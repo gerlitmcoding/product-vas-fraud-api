@@ -14,13 +14,7 @@
   - [Whitebox Overall System {#\_whitebox\_overall\_system}](#whitebox-overall-system-_whitebox_overall_system)
 - [Runtime View {#section-runtime-view}](#runtime-view-section-runtime-view)
 - [Deployment View {#section-deployment-view}](#deployment-view-section-deployment-view)
-  - [Infrastructure Level 1 {#\_infrastructure\_level\_1}](#infrastructure-level-1-_infrastructure_level_1)
-  - [Infrastructure Level 2 {#\_infrastructure\_level\_2}](#infrastructure-level-2-_infrastructure_level_2)
 - [Architecture Decisions {#section-design-decisions}](#architecture-decisions-section-design-decisions)
-- [Quality Requirements {#section-quality-scenarios}](#quality-requirements-section-quality-scenarios)
-  - [Quality Tree {#\_quality\_tree}](#quality-tree-_quality_tree)
-  - [Quality Scenarios {#\_quality\_scenarios}](#quality-scenarios-_quality_scenarios)
-- [Glossary {#section-glossary}](#glossary-section-glossary)
 - [Appendix A - Fraud Prevention Database](#appendix-a---fraud-prevention-database)
   - [Types of Fraud Cases](#types-of-fraud-cases)
   - [Fraud Alerts](#fraud-alerts)
@@ -112,44 +106,10 @@ See Fraud Prevention: Modes of Operation ([Appendix B](#appendix-b--fraud-preven
 Helm Charts: GitHub - catenax-ng/product-vas-fraud-cd https://github.com/catenax-ng/product-vas-fraud-cd
 
 
-## Infrastructure Level 1 {#_infrastructure_level_1}
-
-⚠️ TBD.
-
-## Infrastructure Level 2 {#_infrastructure_level_2}
-
-⚠️ TBD.
-
-
 # Architecture Decisions {#section-design-decisions}
 
 See Fraud Prevention: Modes of Operation ([Appendix B](#appendix-b--fraud-prevention-modes-of-operation)) and Fraud Prevention Database ([Appendix A](#appendix-a---fraud-prevention-database)).
 
-
-# Quality Requirements {#section-quality-scenarios}
-
-⚠️ TBD.
-
-## Quality Tree {#_quality_tree}
-
-⚠️ TBD.
-
-## Quality Scenarios {#_quality_scenarios}
-
-⚠️ TBD.
-
-# Glossary {#section-glossary}
-
-⚠️ TBD.
-
-
-+-----------------------+-----------------------------------------------+
-| Term                  | Definition                                    |
-+=======================+===============================================+
-| *\<Term-1\>*          | *\<definition-1\>*                            |
-+-----------------------+-----------------------------------------------+
-| *\<Term-2\>*          | *\<definition-2\>*                            |
-+-----------------------+-----------------------------------------------+
 
 # Appendix A - Fraud Prevention Database
 
